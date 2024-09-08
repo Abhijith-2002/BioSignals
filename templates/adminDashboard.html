@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Video Input</title>
+    <link rel="stylesheet" href="../static/adminstyles.css">
+    <script src="../static/adminScript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <h2>Upload Video for Analysis</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="video">Choose Video File:</label>
+                <input type="file" name="video" accept="video/*" required>
+            </div>
+            <button type="submit" class="btn">Upload and Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
