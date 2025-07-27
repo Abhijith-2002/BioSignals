@@ -90,16 +90,9 @@ def entry_exit(filename, min_area=500, max_occupancy_duration=10, max_changes=3)
             cv2.putText(frame, alert_text, (10, 50),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
         
-        # Display the resulting frame
-        cv2.imshow("Security Feed", frame)
-        key = cv2.waitKey(1) & 0xFF
-
-        if key == ord("q"):
-            break
-
         prev = occupied
 
     vs.release()
-    cv2.destroyAllWindows()
+    # cv2.destroyAllWindows() # Not needed if no windows are shown
 
     return unusual_behavior

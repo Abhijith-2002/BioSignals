@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
@@ -13,7 +13,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '', // Your MySQL password
-  database: 'your_database_name' // Your database name
+  database: process.env.DB_DATABASE // Your database name
 });
 
 db.connect((err) => {
